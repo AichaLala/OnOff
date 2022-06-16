@@ -1,0 +1,81 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h2>
+
+            Bienvenue , <br> Veuillez Allumer et/ou eteindre la lampe de votre choix .
+        </h2>
+    </header>
+
+    <h1 class="Vert">
+        Lampe verte
+    </h1>
+    <button class="onoff" onclick="onoff(this)"><div>off</div></button>
+
+    <h1 class="rouge">
+        Lampe rouge
+    </h1>
+    <button class="onoff" onclick="onoff(this)"><div>off</div></button>
+
+    <h1 class="orange">
+        Lampe orange
+    </h1>
+    <button class="onoff" onclick="onoff(this)"><div>off</div></button>
+
+    <h1 class="x">
+        Lampe Jaune
+    </h1>
+    <button class="onoff" onclick="onoff(this)"><div>off</div></button>
+
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <footer>
+        Created by :
+        <ul>
+            <li>Mame Lala Aicha Dieng</li>
+            <li>Ange Martiel Djiby</li>
+            <li>Osee Stephane Jonathan Melehi </li>
+        </ul>
+    </footer>
+
+
+    <script>
+        var buttonstate = 0;
+
+        function onoff(element) {
+            buttonstate = 1 - buttonstate;
+            var blabel, bstyle, bcolor;
+            if (buttonstate) {
+                blabel = "on";
+                bstyle = "green";
+                bcolor = "lightgreen";
+            } else {
+                blabel = "off";
+                bstyle = "lightgray";
+                bcolor = "gray";
+            }
+            var child = element.firstChild;
+            child.style.background = bstyle;
+            child.style.color = bcolor;
+            child.innerHTML = blabel;
+        }
+    </script>
+</body>
+
+</html>
